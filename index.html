@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=your_recaptcha_site_key"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <h1>User Form</h1>
+    <p>Please fill in this form.</p>
+    <form id="userForm" action="save_data.php" method="post">
+        <div class="container">
+
+            <label for="firstName">First Name<span> * </span></label>
+            <input type="text" placeholder="Enter First Name" name="firstName" id="firstName" required>
+        
+            <hr>
+            <label for="lastName">Last Name</label>
+            <input type="text" placeholder="Enter Last Name(option)" name="lastName" id="lastName" required>
+        
+            <hr>
+            <label for="dob">Date of Birth<span> * </span></label>
+            <input type="date" id="dob" name="dob" required>
+            <hr>
+            <label for="gender">Gender<span> * </span></label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <hr>
+
+            <label for="telephone">Telephone Number<span> * </span></label>
+            <input type="tel" placeholder="Enter Telephone number" name="telephone" id="telephone" required>
+        
+            <hr>
+            <label for="email">Email<span> * </span></label>
+        
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <hr>
+            <div class="g-recaptcha" data-sitekey="your_recaptcha_site_key"></div>
+            <hr>
+        
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>
